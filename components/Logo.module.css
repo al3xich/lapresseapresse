@@ -1,0 +1,38 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.line {
+  font-family: "Anton", sans-serif;
+  font-size: 21px;
+  letter-spacing: 0.01em;
+  color: #1e1e1e;
+  line-height: 1;
+}
+
+.red {
+  color: #2563eb;
+}
+
+.tagline {
+  font-family: var(--font-body);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+@media (max-width: 520px) {
+  .tagline {
+    display: none;
+  }
+}

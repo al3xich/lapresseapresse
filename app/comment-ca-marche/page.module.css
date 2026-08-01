@@ -1,0 +1,91 @@
+.shell {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+}
+
+.topRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.siteName {
+  font-family: "Anton", sans-serif;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.siteNameAccent {
+  color: var(--accent);
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-bottom: 22px;
+}
+
+.back:hover {
+  color: var(--accent);
+}
+
+.article {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 27px;
+  color: var(--text);
+  margin: 0 0 16px;
+}
+
+.lead {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+  margin: 0 0 28px;
+}
+
+.h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 17px;
+  color: var(--text);
+  margin: 28px 0 12px;
+}
+
+.text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #4b4b50;
+  margin: 0;
+}
+
+.steps {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.steps li {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #4b4b50;
+}
+
+.steps strong {
+  color: var(--text);
+}
