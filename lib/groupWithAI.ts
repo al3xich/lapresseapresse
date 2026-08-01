@@ -1,9 +1,9 @@
 import { Article, Story } from "./types";
 
-// Modèle Gemini gratuit : très large marge par rapport à notre usage réel
-// (7 catégories × ~8 recalculs/jour max = ~56 appels/jour, contre 1500/jour
-// permis par le niveau gratuit).
-const GEMINI_MODEL = "gemini-2.5-flash";
+// Modèle Gemini gratuit actuellement disponible (gemini-2.5-flash a été retiré
+// par Google mi-2026). Très large marge par rapport à notre usage réel
+// (7 catégories × ~6 recalculs/jour max = ~42 appels/jour).
+const GEMINI_MODEL = "gemini-3.5-flash";
 
 const SYSTEM_PROMPT = `Tu es un assistant éditorial neutre. On te donne une liste d'articles
 d'actualité de sources différentes, dans une même catégorie. Ta tâche :
