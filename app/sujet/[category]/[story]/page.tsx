@@ -18,7 +18,7 @@ export default async function StoryDetail({
   const category = getCategory(params.category);
   if (!category) notFound();
 
-  const { stories } = await getCategoryStories(category);
+  const { stories } = await getCategoryStories(category.slug);
   const story = stories.find((s) => slugify(s.headline) === params.story);
   if (!story) notFound();
 

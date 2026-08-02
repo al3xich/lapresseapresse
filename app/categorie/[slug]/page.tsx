@@ -38,7 +38,7 @@ export default async function CategoryPage({ params }: { params: { slug: string 
   if (!category) notFound();
 
   const Icon = ICONS[category.icon];
-  const { stories, demo: isDemo } = await getCategoryStories(category);
+  const { stories, demo: isDemo } = await getCategoryStories(category.slug);
   // Evalué au moment du rendu serveur, donc au moment réel du dernier recalcul ISR.
   const generatedAt = new Date().toISOString();
   const [hero, ...rest] = stories;

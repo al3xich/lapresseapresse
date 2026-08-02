@@ -14,6 +14,6 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "Catégorie inconnue" }, { status: 404 });
   }
 
-  const { stories, demo } = await getCategoryStories(category);
+  const { stories, demo } = await getCategoryStories(category.slug);
   return NextResponse.json({ stories, demo });
 }
