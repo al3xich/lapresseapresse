@@ -3,6 +3,7 @@
 Agrégateur d'actualités françaises : regroupe les articles par thème et croise
 plusieurs sources dans une synthèse neutre, catégorie par catégorie.
 
+
 ## Comment ça marche
 
 1. `lib/sources.ts` liste les flux RSS suivis par catégorie (7 catégories,
@@ -17,7 +18,7 @@ plusieurs sources dans une synthèse neutre, catégorie par catégorie.
 6. Tant qu'aucune clé API n'est configurée, le site affiche des exemples fixes
    (mode démo) au lieu de planter.
 
-Une version plus détaillée et grand public de ce fonctionnement est présentée
+J'ai mis une version plus détaillé et grand public de ce fonctionnement qui est présentée
 sur la page `/comment-ca-marche` du site lui-même.
 
 ## Pages du site
@@ -28,23 +29,12 @@ sur la page `/comment-ca-marche` du site lui-même.
   fait plus partie du calcul en cours)
 - `/comment-ca-marche` — explication du fonctionnement pour les visiteurs
 
-```bash
-git init
-git add .
-git commit -m "Premier déploiement de La Presse à Presse"
-git branch -M main
-git remote add origin https://github.com/TON-COMPTE/la-presse-a-presse.git
-git push -u origin main
-```
-
-
-
 
 ## Personnaliser
 
 - **Ajouter/retirer des sources** : édite `lib/sources.ts`. Vérifie l'URL du
   flux RSS avant de l'ajouter (certains sites changent leurs flux, plusieurs
-  sont marqués `// à vérifier`) — le site ignore silencieusement un flux
+  sont marqués `// à vérifier`) ; le site ignore silencieusement un flux
   cassé plutôt que de planter.
 - **Couleurs des badges de sources** : `lib/sourceColors.ts` — approximations
   des identités visuelles réelles, à corriger au cas par cas si besoin.
@@ -54,6 +44,7 @@ git push -u origin main
   `app/page.tsx`, `app/api/news/route.ts` et
   `app/sujet/[category]/[story]/page.tsx` (en secondes, garder les trois
   synchronisés).
+
 
 ## Développement local
 
