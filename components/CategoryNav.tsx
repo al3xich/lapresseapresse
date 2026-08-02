@@ -24,7 +24,7 @@ export default function CategoryNav({ active }: { active: string }) {
           return (
             <Link
               key={cat.slug}
-              href={`/?category=${cat.slug}`}
+              href={`/categorie/${cat.slug}`}
               className={`${styles.item} ${isActive ? styles.active : ""}`}
             >
               <Icon size={16} strokeWidth={2} className={styles.icon} aria-hidden="true" />
