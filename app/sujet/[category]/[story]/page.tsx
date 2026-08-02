@@ -30,7 +30,7 @@ export default async function StoryDetail({
         </span>
       </div>
 
-      <Link href={`/?category=${category.slug}`} className={styles.back}>
+      <Link href={`/categorie/${category.slug}`} className={styles.back}>
         <ArrowLeft size={16} strokeWidth={2} aria-hidden="true" />
         Retour à {category.label}
       </Link>
