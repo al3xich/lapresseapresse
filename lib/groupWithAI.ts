@@ -1,9 +1,8 @@
 import { Article, Story } from "./types";
 
-// Modèle Gemini gratuit actuellement disponible (gemini-2.5-flash a été retiré
-// par Google mi-2026). Très large marge par rapport à notre usage réel
+// modele gemini 3.1 flash lite déployé dans le but de consommer moins de ressources
 // (7 catégories × ~6 recalculs/jour max = ~42 appels/jour).
-const GEMINI_MODEL = "gemini-3.5-flash";
+const GEMINI_MODEL = "gemini-3.1-flash-lite";
 
 const SYSTEM_PROMPT = `Tu es un assistant éditorial neutre. On te donne une liste d'articles
 d'actualité de sources différentes, dans une même catégorie. Ta tâche :
