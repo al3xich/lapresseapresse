@@ -2,24 +2,27 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { getCategory } from "@/lib/sources";
-import { getCategoryStories } from "@/lib/getStories";
-import { slugify } from "@/lib/slug";
+import { decodeStory } from "@/lib/storyEncoding";
 import SourceBadges from "@/components/SourceBadges";
 import styles from "./page.module.css";
 
-// Même fenêtre de cache que la page catégorie, pour rester cohérent.
-export const revalidate = 14400;
-
-export default async function StoryDetail({
+// Cette page ne redemande plus rien à l'IA : elle lit directement le sujet
+// encodé dans le paramètre ?d= du lien cliqué (voir StoryCard.tsx et
+// lib/storyEncoding.ts). Ce qu'on clique est donc garanti être ce qu'on
+// obtient, sans dépendre d'un cache qui pourrait diverger entre deux appels
+// à l'IA. Contrepartie : un lien copié sans son paramètre ?d= (ou une vieille
+// carte de résultats de recherche) ne pourra pas afficher le sujet.
+export default function StoryDetail({
   params,
+  searchParams,
 }: {
   params: { category: string; story: string };
+  searchParams: { d?: string };
 }) {
   const category = getCategory(params.category);
   if (!category) notFound();
 
-  const { stories } = await getCategoryStories(category.slug);
-  const story = stories.find((s) => slugify(s.headline) === params.story);
+  const story = searchParams.d ? decodeStory(searchParams.d) : null;
   if (!story) notFound();
 
   return (
