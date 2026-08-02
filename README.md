@@ -28,11 +28,6 @@ sur la page `/comment-ca-marche` du site lui-même.
   fait plus partie du calcul en cours)
 - `/comment-ca-marche` — explication du fonctionnement pour les visiteurs
 
-## Déployer (gratuit)
-
-### 1. Mettre le code sur GitHub
-Crée un nouveau repository sur ton compte GitHub et pousse ce dossier dedans :
-
 ```bash
 git init
 git add .
@@ -42,30 +37,8 @@ git remote add origin https://github.com/TON-COMPTE/la-presse-a-presse.git
 git push -u origin main
 ```
 
-### 2. Connecter Vercel
-- Va sur [vercel.com](https://vercel.com), connecte-toi avec GitHub.
-- "Add New Project" → sélectionne le repository.
-- Framework détecté automatiquement : Next.js. Clique sur **Deploy**.
-- Ton site est en ligne en ~2 minutes.
 
-À ce stade, le site fonctionne déjà, en **mode démo**.
 
-### 3. Ajouter la clé API (quand tu es prêt)
-- Crée une clé gratuite sur [aistudio.google.com](https://aistudio.google.com)
-  (connexion avec un compte Google normal, pas besoin de carte bancaire).
-- Dans Vercel : Project → Settings → Environment Variables →
-  ajoute `GEMINI_API_KEY` avec ta clé, pour l'environnement "Production".
-- Redéploie (Vercel le fait automatiquement, ou clique "Redeploy").
-- Le site bascule automatiquement en mode réel.
-
-## Coût une fois en place
-- **Hébergement Vercel** : gratuit (plan Hobby), tant que l'usage reste
-  personnel et raisonnable.
-- **API Gemini** : gratuite au niveau utilisé ici (modèle Flash, ~56 appels/jour
-  max contre 1500/jour permis par le niveau gratuit) — aucun coût récurrent
-  tant que le trafic reste personnel.
-- **Mise à jour** : automatique via le cache de la page (pas besoin de cron
-  job).
 
 ## Personnaliser
 
