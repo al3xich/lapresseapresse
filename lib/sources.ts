@@ -5,11 +5,6 @@ export type Category = {
   feeds: { name: string; url: string }[];
 };
 
-// Chaque catégorie mélange volontairement des lignes éditoriales différentes,
-// pour que l'agrégation par thème montre des angles variés sur un même sujet.
-// Les flux marqués "à vérifier" suivent le format standard du CMS du site
-// mais n'ont pas été testés individuellement — si une catégorie semble vide,
-// commence par ceux-là.
 export const CATEGORIES: Category[] = [
   {
     slug: "politique-francaise",
@@ -22,10 +17,12 @@ export const CATEGORIES: Category[] = [
       { name: "Le Figaro", url: "https://www.lefigaro.fr/rss/figaro_politique.xml" },
       { name: "Les Échos", url: "https://services.lesechos.fr/rss/les-echos-politique.xml" },
       { name: "Mediapart", url: "https://www.mediapart.fr/articles/feed" },
-      { name: "Valeurs Actuelles", url: "https://www.valeursactuelles.com/feed" }, // à vérifier
-      { name: "Boulevard Voltaire", url: "https://www.bvoltaire.fr/feed" }, // à vérifier
-      { name: "Causeur", url: "https://www.causeur.fr/feed" }, // à vérifier
-      { name: "Marianne", url: "https://www.marianne.net/rss.xml" }, // à vérifier
+      { name: "Valeurs Actuelles", url: "https://www.valeursactuelles.com/feed" },
+      { name: "Boulevard Voltaire", url: "https://www.bvoltaire.fr/feed" },
+      { name: "Causeur", url: "https://www.causeur.fr/feed" },
+      { name: "Marianne", url: "https://www.marianne.net/rss.xml" }, // captcha lock
+      { name: "BFM TV", url: "https://www.bfmtv.com/rss/politique/" },
+      { name: "CNEWS", url: "https://www.cnews.fr/rss/tag/politique" },
     ],
   },
   {
@@ -42,10 +39,10 @@ export const CATEGORIES: Category[] = [
         name: "Capital",
         url: "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital,polemik,xerfi,capital-avec-agence-france-presse,capital-avec-aof,capital-avec-reuters,capital-avec-optimaretraite&categories=entreprises-marches",
       },
-      { name: "BFM Business", url: "https://www.bfmbusiness.com/rss/news.xml" }, // à vérifier
-      { name: "Boursorama", url: "https://www.boursorama.com/rss.xml" }, // à vérifier
-      { name: "Alternatives Économiques", url: "https://www.alternatives-economiques.fr/rss.xml" }, // à vérifier
-      { name: "Contrepoints", url: "https://www.contrepoints.org/feed" }, // à vérifier
+      { name: "BFM Business", url: "https://www.bfmbusiness.com/rss/news.xml" },
+      { name: "Boursorama", url: "https://www.boursorama.com/rss.xml" },
+      { name: "Alternatives Économiques", url: "https://www.alternatives-economiques.fr/rss.xml" },
+      { name: "Contrepoints", url: "https://www.contrepoints.org/feed" },
     ],
   },
   {
@@ -59,7 +56,7 @@ export const CATEGORIES: Category[] = [
       { name: "Next (Libération)", url: "https://next.ink/feed/" },
       { name: "Journal du Geek", url: "https://www.journaldugeek.com/feed/" },
       { name: "ZDNet France", url: "https://www.zdnet.fr/feed/" },
-      { name: "Frandroid", url: "https://www.frandroid.com/feed" }, // à vérifier
+      { name: "Frandroid", url: "https://www.frandroid.com/feed" },
     ],
   },
   {
@@ -67,15 +64,15 @@ export const CATEGORIES: Category[] = [
     icon: "home",
     label: "Immobilier",
     feeds: [
-      { name: "Le Figaro Immobilier", url: "https://www.lefigaro.fr/rss/figaro_immobilier.xml" }, // à vérifier
-      { name: "Les Échos Immobilier", url: "https://www.lesechos.fr/rss/rss_immobilier.xml" }, // à vérifier
-      { name: "SeLoger — L'immobilier décrypté", url: "https://edito.seloger.com/rss" }, // à vérifier
-      { name: "PAP", url: "https://actu.pap.fr/feed" }, // à vérifier
+      { name: "Le Figaro Immobilier", url: "https://www.lefigaro.fr/rss/figaro_immobilier.xml" },
+      { name: "Les Échos Immobilier", url: "https://www.lesechos.fr/rss/rss_immobilier.xml" }, // a check
+      { name: "SeLoger — L'immobilier décrypté", url: "https://edito.seloger.com/rss" }, // a check
+      { name: "PAP", url: "https://actu.pap.fr/feed" }, // a check
       { name: "Economie Matin — Immobilier", url: "https://www.economiematin.fr/immobilier/feed" },
       {
         name: "Capital Immobilier",
         url: "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital,polemik,xerfi,capital-avec-agence-france-presse,capital-avec-aof,capital-avec-reuters,capital-avec-optimaretraite&categories=immobilier",
-      }, // à vérifier
+      }, // a check
       { name: "Actu-Environnement — Bâtiment", url: "https://www.actu-environnement.com/flux/rss/batiment/" },
     ],
   },
@@ -84,16 +81,18 @@ export const CATEGORIES: Category[] = [
     icon: "globe",
     label: "International",
     feeds: [
-      { name: "France 24", url: "https://www.france24.com/fr/rss" }, // à vérifier
-      { name: "RFI", url: "https://www.rfi.fr/fr/rss" }, // à vérifier
-      { name: "Courrier International", url: "https://www.courrierinternational.com/feed/all/rss.xml" }, // à vérifier
+      { name: "France 24", url: "https://www.france24.com/fr/rss" },
+      { name: "RFI", url: "https://www.rfi.fr/fr/rss" },
+      { name: "Courrier International", url: "https://www.courrierinternational.com/feed/all/rss.xml" },
       { name: "Le Monde International", url: "https://www.lemonde.fr/international/rss_full.xml" },
-      { name: "Le Figaro International", url: "https://www.lefigaro.fr/rss/figaro_international.xml" }, // à vérifier
+      { name: "Le Figaro International", url: "https://www.lefigaro.fr/rss/figaro_international.xml" },
       { name: "France Info Monde", url: "https://www.francetvinfo.fr/monde.rss" },
-      { name: "Valeurs Actuelles", url: "https://www.valeursactuelles.com/feed" }, // à vérifier
-      { name: "Boulevard Voltaire", url: "https://www.bvoltaire.fr/feed" }, // à vérifier
-      { name: "TV5Monde Info", url: "https://information.tv5monde.com/rss.xml" }, // à vérifier
-      { name: "Libération International", url: "https://www.liberation.fr/arc/outboundfeeds/rss-all/category/monde/?outputType=xml" }, // à vérifier
+      { name: "Valeurs Actuelles", url: "https://www.valeursactuelles.com/feed" },
+      { name: "Boulevard Voltaire", url: "https://www.bvoltaire.fr/feed" },
+      { name: "TV5Monde Info", url: "https://information.tv5monde.com/rss.xml" },
+      { name: "Libération International", url: "https://www.liberation.fr/arc/outboundfeeds/rss-all/category/monde/?outputType=xml" },
+      { name: "CNEWS", url: "https://www.cnews.fr/rss/categorie/monde" },
+      { name: "BFM TV", url: "https://www.bfmtv.com/rss/international/" },
     ],
   },
   {
@@ -104,9 +103,8 @@ export const CATEGORIES: Category[] = [
       { name: "L'Équipe", url: "https://www.lequipe.fr/rss/actu_rss.xml" },
       { name: "France Info", url: "https://www.francetvinfo.fr/sports.rss" },
       { name: "RMC Sport", url: "https://rmcsport.bfmtv.com/rss/" },
-      { name: "Eurosport", url: "https://www.eurosport.fr/rss.xml" }, // à vérifier
-      { name: "France Football", url: "https://www.francefootball.fr/rss" }, // à vérifier
-      { name: "Le Parisien Sport", url: "https://www.leparisien.fr/sports/rss.xml" }, // à vérifier
+      { name: "France Football", url: "https://www.francefootball.fr/rss" },
+      { name: "Le Parisien Sport", url: "https://www.leparisien.fr/sports/rss.xml" }, 
     ],
   },
   {
@@ -119,7 +117,7 @@ export const CATEGORIES: Category[] = [
       { name: "IGN France", url: "https://fr.ign.com/feed.xml" },
       { name: "France Info", url: "https://www.francetvinfo.fr/culture.rss" },
       { name: "Le Monde Culture", url: "https://www.lemonde.fr/culture/rss_full.xml" },
-      { name: "Gamekult", url: "https://www.gamekult.com/feed.xml" }, // à vérifier
+      { name: "Gamekult", url: "https://www.gamekult.com/feed.xml" }, 
     ],
   },
 ];
