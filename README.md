@@ -37,7 +37,7 @@ sur la page `/comment-ca-marche` du site lui-même.
   réguilièrement. Le site ignore silencieusement un flux cassé plutôt que de planter.
 - **Couleurs des badges de sources** : `lib/sourceColors.ts` — approximations
   des identités visuelles réelles, à corriger au cas par cas si besoin.
-  Pour le moment flemme de maj, plus tard je compte récupérer les
+  Pour le moment pas de maj prévue ; plus tard je compte récupérer les
   logos officiels.
 - **Changer le nombre d'articles regardés par source** : `fetchNews.ts`,
   variable `.slice(0, 8)`.
