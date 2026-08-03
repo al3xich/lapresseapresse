@@ -1,11 +1,5 @@
 import { Article, Story } from "./types";
 
-// Modèle Gemini gratuit actuellement disponible. gemini-3.5-flash a été
-// abandonné après un seul jour de test : son quota gratuit s'est révélé
-// n'être que de 20 requêtes/jour (confirmé par l'erreur 429 reçue en direct
-// de l'API), largement insuffisant pour générer 7 pages à chaque build.
-// gemini-3.1-flash-lite offre un quota gratuit nettement plus généreux,
-// pensé justement pour ce genre d'usage à volume modéré mais régulier.
 const GEMINI_MODEL = "gemini-3.1-flash-lite";
 
 const SYSTEM_PROMPT = `Tu es un assistant éditorial neutre. On te donne une liste d'articles
