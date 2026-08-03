@@ -7,14 +7,12 @@ const parser = new Parser({
   headers: { "User-Agent": "Al3xinfoNewsBot/1.0 (+agregateur personnel)" },
 });
 
-// Va chercher chaque flux RSS de la catégorie et renvoie une liste plate
-// d'articles récents, en ignorant silencieusement les flux qui échouent
-// (site en panne, format RSS cassé, etc.) pour ne jamais faire planter la page.
+// Va chercher chaque flux RSS de la catégorie et renvoie une liste plate d'articles récents, le script ignore silencieusement les flux qui échouent pour ne faire planter la page.
 export async function fetchCategoryArticles(category: Category): Promise<Article[]> {
   const results = await Promise.allSettled(
     category.feeds.map(async (feed) => {
       const parsed = await parser.parseURL(feed.url);
-      return (parsed.items || []).slice(0, 8).map((item): Article => ({
+      return (parsed.items || []).slice(0, 10).map((item): Article => ({
         title: item.title?.trim() || "(sans titre)",
         link: item.link || "",
         source: feed.name,
@@ -29,7 +27,7 @@ export async function fetchCategoryArticles(category: Category): Promise<Article
     if (r.status === "fulfilled") articles.push(...r.value);
   }
 
-  // Les plus récents en premier, en ne gardant que les dernières 48h quand la date est connue.
+  // Les plus récents pop en 1er, je gtarde que les dernières 48h quand la date est connue.
   const cutoff = Date.now() - 48 * 60 * 60 * 1000;
   return articles
     .filter((a) => !a.publishedAt || new Date(a.publishedAt).getTime() > cutoff)
