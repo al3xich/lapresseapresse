@@ -23,6 +23,11 @@ export const CATEGORIES: Category[] = [
       { name: "Libération International", url: "https://www.liberation.fr/arc/outboundfeeds/rss-all/category/monde/?outputType=xml" },
       { name: "CNEWS", url: "https://www.cnews.fr/rss/categorie/monde" },
       { name: "BFM TV", url: "https://www.bfmtv.com/rss/international/" },
+      { name: "Les Echos", url: "https://services.lesechos.fr/rss/les-echos-monde.xml" },
+      { name: "L'Express", url: "https://www.lexpress.fr/arc/outboundfeeds/rss/monde.xml" },
+      { name: "20 Minutes", url: "https://www.20minutes.fr/feeds/rss-monde.xml" },
+      { name: "Le Point", url: "https://www.lepoint.fr/arc/outboundfeeds/rss/category/monde/" },
+      { name: "RMC", url: "https://rmc.bfmtv.com/rss/actualites/international/" },
     ],
   },
   {
@@ -42,6 +47,7 @@ export const CATEGORIES: Category[] = [
       { name: "Marianne", url: "https://www.marianne.net/rss.xml" }, // captcha lock
       { name: "BFM TV", url: "https://www.bfmtv.com/rss/politique/" },
       { name: "CNEWS", url: "https://www.cnews.fr/rss/tag/politique" },
+      { name: "RMC", url: "https://rmc.bfmtv.com/rss/actualites/politique/" },
     ],
   },
   {
@@ -62,6 +68,7 @@ export const CATEGORIES: Category[] = [
       { name: "Boursorama", url: "https://www.boursorama.com/rss.xml" },
       { name: "Alternatives Économiques", url: "https://www.alternatives-economiques.fr/rss.xml" },
       { name: "Contrepoints", url: "https://www.contrepoints.org/feed" },
+      { name: "RMC", url: "https://rmc.bfmtv.com/rss/actualites/economie/" },
     ],
   },
   {
