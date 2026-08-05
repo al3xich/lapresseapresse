@@ -29,7 +29,7 @@ export default function CommentCaMarche() {
           publications de plusieurs médias, repère celles qui parlent du même
           sujet, et en tire une synthèse neutre qui met en évidence les points
           de convergence et les divergences d&apos;angle entre les sources :
-          à toi de te faire ta propre opinion.
+          à toi de te faire ta propre opinion :)
         </p>
 
         <h2 className={styles.h2}>Les quatre étapes</h2>
@@ -40,9 +40,9 @@ export default function CommentCaMarche() {
             volontairement variées.
           </li>
           <li>
-            <strong>Regroupement</strong>: une IA lit les articles récents et
-            regroupe ceux qui traitent du même événement précis, en ignorant
-            les sujets isolés.
+            <strong>Regroupement</strong>: une API lit les article récents et
+            regroupe ceux qui traitent du même événement précis, les sujets
+            isolés sont ignorés.
           </li>
           <li>
             <strong>Synthèse</strong>: pour chaque sujet couvert par au moins
@@ -64,13 +64,13 @@ export default function CommentCaMarche() {
 
         <h2 className={styles.h2}>Sur la neutralité</h2>
         <p className={styles.text}>
-          L&apos;IA reçoit pour consigne explicite de rester factuelle et de
+          L&apos;IA reçoit pour consigne explicite de rester factuel et de
           ne jamais trancher entre les versions des différentes sources: son
-          rôle est de mettre les angles en regard les uns des autres, pas de
+          rôle est de mettre les points de convergence et de divergence, pas de
           désigner lequel a raison. Certaines catégories, comme Politique
           française et International, mélangent volontairement des lignes
           éditoriales très différentes (de Mediapart à Valeurs Actuelles) pour
-          que la pluralité soit réelle, pas symbolique.
+          que la pluralité soit réelle et pas simplement symbolique.
         </p>
 
         <h2 className={styles.h2}>Les limites, en toute transparence</h2>
