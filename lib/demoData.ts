@@ -1,7 +1,6 @@
 import { Story } from "./types";
 
-// Affiché tant que GEMINI_API_KEY n'est pas configurée sur Vercel, pour que
-// le site ait un rendu concret dès le premier déploiement.
+// mode demo
 export const DEMO_STORIES: Record<string, Story[]> = {
   "politique-francaise": [
     {
