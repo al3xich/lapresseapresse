@@ -7,6 +7,25 @@ export type Category = {
 
 export const CATEGORIES: Category[] = [
   {
+    slug: "international",
+    icon: "globe",
+    label: "International",
+    feeds: [
+      { name: "France 24", url: "https://www.france24.com/fr/rss" },
+      { name: "RFI", url: "https://www.rfi.fr/fr/rss" },
+      { name: "Courrier International", url: "https://www.courrierinternational.com/feed/all/rss.xml" },
+      { name: "Le Monde International", url: "https://www.lemonde.fr/international/rss_full.xml" },
+      { name: "Le Figaro International", url: "https://www.lefigaro.fr/rss/figaro_international.xml" },
+      { name: "France Info Monde", url: "https://www.francetvinfo.fr/monde.rss" },
+      { name: "Valeurs Actuelles", url: "https://www.valeursactuelles.com/feed" },
+      { name: "Boulevard Voltaire", url: "https://www.bvoltaire.fr/feed" },
+      { name: "TV5Monde Info", url: "https://information.tv5monde.com/rss.xml" },
+      { name: "Libération International", url: "https://www.liberation.fr/arc/outboundfeeds/rss-all/category/monde/?outputType=xml" },
+      { name: "CNEWS", url: "https://www.cnews.fr/rss/categorie/monde" },
+      { name: "BFM TV", url: "https://www.bfmtv.com/rss/international/" },
+    ],
+  },
+  {
     slug: "politique-francaise",
     icon: "landmark",
     label: "Politique française",
@@ -74,25 +93,6 @@ export const CATEGORIES: Category[] = [
         url: "https://feed.prismamediadigital.com/v1/cap/rss?sources=capital,polemik,xerfi,capital-avec-agence-france-presse,capital-avec-aof,capital-avec-reuters,capital-avec-optimaretraite&categories=immobilier",
       }, // a check
       { name: "Actu-Environnement — Bâtiment", url: "https://www.actu-environnement.com/flux/rss/batiment/" },
-    ],
-  },
-  {
-    slug: "international",
-    icon: "globe",
-    label: "International",
-    feeds: [
-      { name: "France 24", url: "https://www.france24.com/fr/rss" },
-      { name: "RFI", url: "https://www.rfi.fr/fr/rss" },
-      { name: "Courrier International", url: "https://www.courrierinternational.com/feed/all/rss.xml" },
-      { name: "Le Monde International", url: "https://www.lemonde.fr/international/rss_full.xml" },
-      { name: "Le Figaro International", url: "https://www.lefigaro.fr/rss/figaro_international.xml" },
-      { name: "France Info Monde", url: "https://www.francetvinfo.fr/monde.rss" },
-      { name: "Valeurs Actuelles", url: "https://www.valeursactuelles.com/feed" },
-      { name: "Boulevard Voltaire", url: "https://www.bvoltaire.fr/feed" },
-      { name: "TV5Monde Info", url: "https://information.tv5monde.com/rss.xml" },
-      { name: "Libération International", url: "https://www.liberation.fr/arc/outboundfeeds/rss-all/category/monde/?outputType=xml" },
-      { name: "CNEWS", url: "https://www.cnews.fr/rss/categorie/monde" },
-      { name: "BFM TV", url: "https://www.bfmtv.com/rss/international/" },
     ],
   },
   {
