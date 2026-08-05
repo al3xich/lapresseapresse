@@ -12,7 +12,7 @@ export async function fetchCategoryArticles(category: Category): Promise<Article
   const results = await Promise.allSettled(
     category.feeds.map(async (feed) => {
       const parsed = await parser.parseURL(feed.url);
-      return (parsed.items || []).slice(0, 10).map((item): Article => ({
+      return (parsed.items || []).slice(0, 12).map((item): Article => ({
         title: item.title?.trim() || "(sans titre)",
         link: item.link || "",
         source: feed.name,
@@ -28,7 +28,7 @@ export async function fetchCategoryArticles(category: Category): Promise<Article
   }
 
   // Les plus récents pop en 1er, je gtarde que les dernières 48h quand la date est connue.
-  const cutoff = Date.now() - 48 * 60 * 60 * 1000;
+  const cutoff = Date.now() - 72 * 60 * 60 * 1000;
   return articles
     .filter((a) => !a.publishedAt || new Date(a.publishedAt).getTime() > cutoff)
     .sort((a, b) => {
