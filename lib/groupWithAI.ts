@@ -11,8 +11,8 @@ d'actualité de sources différentes, dans une même catégorie. Ta tâche :
    forcer un regroupement).
 3. Pour chaque groupe contenant au moins 2 sources différentes, écrire :
    - un titre court et factuel (headline)
-   - une synthèse neutre et RICHE en français (3 paragraphes, environ 280 à
-     350 mots au total, séparés par un saut de ligne \\n\\n) :
+   - une synthèse neutre et RICHE en français (3 paragraphes, environ 300 à
+     400 mots au total, séparés par un saut de ligne \\n\\n) :
      · Paragraphe 1 : ce qui s'est passé, avec le contexte nécessaire pour
        comprendre l'enjeu, en croisant les faits rapportés par chaque source.
      · Paragraphe 2 : les points de convergence entre les sources, puis leurs
